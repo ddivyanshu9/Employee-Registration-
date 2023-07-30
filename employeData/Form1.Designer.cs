@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             groupBox1 = new GroupBox();
             btnReset = new Button();
@@ -51,10 +52,20 @@
             txtSearch = new TextBox();
             label7 = new Label();
             dataGridView1 = new DataGridView();
+            errorProvider1 = new ErrorProvider(components);
+            errorProvider3 = new ErrorProvider(components);
+            errorProvider2 = new ErrorProvider(components);
+            errorProvider4 = new ErrorProvider(components);
+            errorProvider5 = new ErrorProvider(components);
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ageField).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider5).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -263,6 +274,7 @@
             btnSearch.TabIndex = 13;
             btnSearch.Text = "Go";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // txtSearch
             // 
@@ -291,6 +303,26 @@
             dataGridView1.TabIndex = 3;
             dataGridView1.DoubleClick += dataGridView1_DoubleClick;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            errorProvider5.ContainerControl = this;
+            // 
             // Form1
             // 
             AccessibleName = "";
@@ -312,6 +344,11 @@
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -341,5 +378,10 @@
         private Label label7;
         private Label label8;
         private DataGridView dataGridView1;
+        private ErrorProvider errorProvider1;
+        private ErrorProvider errorProvider3;
+        private ErrorProvider errorProvider2;
+        private ErrorProvider errorProvider4;
+        private ErrorProvider errorProvider5;
     }
 }
